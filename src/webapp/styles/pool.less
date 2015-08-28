@@ -1,0 +1,21 @@
+@import "defs";
+
+.gm-pool {
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid #333333;
+  font-size: 8px;
+
+  tr {
+    td {
+      width: @poolCellSz;
+      height: @poolCellSz;
+      margin: 0px;
+    }
+  }
+
+  .gm-cell-full {
+    border: 1px solid #333333;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "blockus-m",
+  "version": "0.0.0",
+  "authors": [
+    "maria <maria.n.dimakopoulou@gmail.com>"
+  ],
+  "description": "blockus-m viewer",
+  "main": "index",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.18",
+    "bootstrap": "~3.3.5",
+    "q": "~1.0.1",
+    "angular": "~1.4.3",
+    "lodash": "~3.10.0"
+  }
+}

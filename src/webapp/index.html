@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Blockus-M</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <script src="bower_components/requirejs/require.js"></script>
+    <script src="scripts/config.js"></script>
+    <script>
+        require(['index'], function (mod) {
+            mod.init();
+        });
+    </script>
+</head>
+<body ng-controller="gmGameInit">
+<table>
+    <tr>
+        <td valign="top" ng-if="playerColors.length>1">
+            <gm-pool color="{{playerColors[1]}}"></gm-pool>
+        </td>
+        <td rowspan="2" valign="top">
+            <gm-board></gm-board>
+        </td>
+        <td valign="top">
+            <gm-pool color="{{playerColors[0]}}"></gm-pool>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" ng-if="playerColors.length>2">
+            <gm-pool color="{{playerColors[2]}}"></gm-pool>
+        </td>
+        <td valign="top" ng-if="playerColors.length>3">
+            <gm-pool color="{{playerColors[3]}}"></gm-pool>
+        </td>
+    </tr>
+</table>
+<button class="btn btn-default" ng-click="forfeit()">Forfeit Game!</button>
+<gm-drag-helper></gm-drag-helper>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div>
+    <div ng-class="{'active-player':activePlayerPool,'inactive-player':!activePlayerPool}" ng-if="!state.gameEnded">
+        <table class="{{clazz}}">
+            <tr ng-repeat="row in grid.cells">
+                <td ng-repeat="cell in row"
+                    class="gm-cell-{{cell.block===null?'none':cell.block.color}} {{cell.extraClasses.join(' ')}}"
+                    ng-class="{'gm-cell-full':cell.block!==null}">
+
+                    <div gm-draggable gm-cell="cell" class="full-size">
+                        &nbsp;
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <span class="pull-right">Remaining Squares: {{grid.fullCells()}}</span>
+    </div>
+    <div ng-if="state.gameEnded">
+        <h1>Score = {{score()}}</h1>
+    </div>
+</div>

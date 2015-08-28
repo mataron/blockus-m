@@ -1,0 +1,31 @@
+@import "defs";
+
+.gm-drag-help-off {
+  display: none;
+}
+
+.gm-drag-help-on {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font-size: 8px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+
+  tr {
+    td {
+      opacity: 0;
+      width: @gridCellSz;
+      height: @gridCellSz;
+      margin: 0px;
+    }
+  }
+
+  .gm-cell-full {
+    opacity: 1 !important;
+    border: 1px solid #333333;
+    cursor: pointer;
+  }
+}

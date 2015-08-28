@@ -1,0 +1,15 @@
+<table class="{{clazz}}">
+    <tr ng-repeat="row in grid.cells">
+        <td ng-repeat="cell in row"
+            class="gm-cell-{{cell.block===null?'none':cell.block.color}} {{cell.extraClasses.join(' ')}}"
+            ng-class="{'gm-cell-full':cell.block!==null}"
+            ng-mouseover="onMouseOver(cell)"
+            ng-mouseup="onMouseUp(cell)">
+
+            <div class="full-size" ng-if="!draggable">
+                &nbsp;
+            </div>
+
+        </td>
+    </tr>
+</table>

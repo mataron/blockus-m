@@ -1,0 +1,5 @@
+{
+  "logLevel": "debug",
+  "port": 9000,
+  "root": "../webapp"
+}
